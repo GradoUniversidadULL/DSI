@@ -1,0 +1,65 @@
+extends layoutpre
+block content
+    
+        #contenido
+          .row
+            br
+            .col-sm-3
+              br
+              #perfil
+                if(user)
+                  if(user.photo)
+                    img(src="#{user.photo}", height='200', width='200')
+                  else
+                    img(src='Usuario-Icono.jpg', height='200', width='200')
+                else
+                  img(src='Usuario-Icono.jpg', height='200', width='200')
+                  
+                
+                form#form_input.form-group(method='post', action="api/photo",enctype="multipart/form-data")
+                  label(for='exampleInputFile')
+                  input#exampleInputFile(type='file',name="userPhoto")
+                  input#saveima.btn.btn-danger(type='submit',value="Guardar")
+                if(user)
+                  h4
+                    |Nombre:&nbsp;
+                    strong #{user.name}
+                  p Seguidores:
+                  p#seg
+                  br
+                  button#edit.btn.btn-success Editar
+                  
+                  
+            .col-sm-9
+              .contenido
+                .table-responsive
+                  table#tablelibro.table.table-hover
+                    tr
+                      th Nombre
+                      th Autor
+                      th Likes
+                      th
+            script(type='text/javascript').
+              $.get('cargar', function (json) {
+                  console.log(json);
+                  var data = "";
+                  for (l in json) {
+                      data += '<tr id="'+ json[l].titulo + '" class="center" value="' + json[l]._creator.name + '">'
+                      data += '<td>'  + json[l].titulo + '</td>'
+                      data += '<td>' + json[l]._creator.name + '</td>'
+                      data += '<td>' + json[l].likes + '</td> '
+                      data += '<td><button id="editar_l" value="' + json[l].titulo +'" type="button" aria-label="Left Align" class="editar btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-pencil"></span></button>'
+                      data += '<button id="delete_l" value="' + json[l].titulo +'" type="button" aria-label="Left Align" class="borrar btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-trash"></span></button></td>' 
+                      data += '</tr>'
+                      
+                  }
+                  $(".table").append(data)
+                
+              });
+                   
+                     
+        #pie
+          .row
+            .col-sm-12
+              hr
+      

@@ -1,0 +1,34 @@
+extends layout
+block content
+		.col-sm-9
+				table#tablelibro.table.table-hover
+					tr
+						th Nombre
+						th Autor
+						th Likes
+						th Ver
+					
+					
+					script(type='text/javascript').
+						
+					
+
+							$.get('/cargarHome', function (json) {
+									
+									console.log(json);
+									var data = "";
+									for (l in json) {
+											data += '<tr id="'+ json[l].titulo + '" class="center" value="' + json[l]._creator.name + '">'
+											data += '<td>'  + json[l].titulo + '</td>'
+											data += '<td>' + json[l]._creator.name + '</td>'
+											data += '<td>' + json[l].likes + '</td> '
+											data += '<td> <a href="visualizar"><span id="non" class="glyphicon glyphicon-eye-open "> </a></td>' 
+											data += '</tr>'
+											
+									}
+									$(".table").append(data)
+								
+							});
+			
+							
+		include ./pie.jade
