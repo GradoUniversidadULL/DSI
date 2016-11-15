@@ -1,0 +1,57 @@
+
+  <div class="contenido_total">
+    <div class="titulo_practica">
+      <h1 align="center">
+        <font color="blue">Comma Separated Values (CSV) Analyzer with Ajax</font>
+      </h1>
+      <hr>
+    </div>
+    <div class="contenido">
+      <table class="center" id="input">
+        <tr><th>Escriba aquí una entrada CSV o bien</th></tr>
+        <tr><th>Arrastre un fichero CSV hasta la zona de entrada</th></tr>
+        <tr>
+          <th>
+            <textarea class = "drop_zone" autofocus="" cols = "80" rows = "5" id="original"></textarea>
+          </th>
+          <th>
+            <button type="button" id="parse"> Analizar!</button>
+          </th>
+          
+           <th>
+            <button type="button" id="save">Save</button>
+           </th>
+           <th>
+             <input id="username" class="save" type="text" name="username" placeholder="Nombre de Usuario">
+           </th>
+           <th>
+             <input id="fname" class="save" type="text" name="fname" placeholder="Nombre del fichero a guardar">
+           </th>
+            
+          
+        </tr>
+        <tr>
+        </tr>
+        <tr>
+          <th>
+            <div class="examples">
+              Click para cargar ejemplos:
+              <button class ="example" type="button" id="input1">input</button>
+              <button class ="example" type="button" id="input2">input2</button>
+              <button class ="example" type="button" id="input3">input3</button>
+            </div>
+          </th>
+        </tr>
+        <tr>
+          <th>
+              Cargar archivo: 
+              <input type="file" class="inputfile" id="cargar" />
+          </th>
+        </tr>
+      </table>
+      
+      <div class="output" id="finaltable">
+      </div>
+      <output id="list"></output>
+    </div>
+  </div>
