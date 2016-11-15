@@ -1,0 +1,9 @@
+<table id="result" class="center">
+    <% originals.forEach(function(fila) { %>
+    	<tr class="<%= fila.rowClass %>">
+        	<% fila.value.forEach(function(celda) { %>
+        		<td><%= celda %></td>
+        	<% }); %>
+        </tr>
+    <% }); %>
+</table>

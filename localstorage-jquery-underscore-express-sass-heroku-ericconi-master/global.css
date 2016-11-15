@@ -1,0 +1,77 @@
+* Remove the default margin and the padding 
+   of all the elements on the page. */
+* {
+  margin: 0;
+  padding: 0; }
+
+h1 {
+  text-align: center;
+  font-size: x-large; }
+
+th, td {
+  vertical-align: top;
+  text-align: right; }
+
+#finaltable:hover td {
+  background-color: pink; }
+
+tr:nth-child(odd) {
+  background-color: #eee; }
+
+tr:nth-child(even) {
+  background-color: #00FF66; }
+
+input {
+  text-align: right; }
+  input border {
+    style: double;
+    width: 25px; }
+
+/* Align input to the right  */
+textarea {
+  border: outset;
+  border-color: green; }
+
+table {
+  border: inset;
+  border-color: green; }
+
+table.center {
+  margin-left: auto;
+  margin-right: auto; }
+
+#result {
+  border-color: red; }
+
+tr.error {
+  background-color: red; }
+
+button {
+  background-color: green;
+  border-radius: 12px;
+  border-color: blue;
+  padding: 15px 32px;
+  font-size: 16px;
+  color: white;
+  display: inline-block; }
+  button text {
+    align: center;
+    decoration: none;
+    color: white; }
+
+body {
+  margin: 100px 150px 100px 100px;
+  background: #b3dced;
+  background: -moz-linear-gradient(left, #b3dced 0%, #29b8e5 15%, #bce0ee 72%, #bce0ee 81%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, #b3dced), color-stop(15%, #29b8e5), color-stop(72%, #bce0ee), color-stop(81%, #bce0ee));
+  background: -webkit-linear-gradient(left, #b3dced 0%, #29b8e5 15%, #bce0ee 72%, #bce0ee 81%);
+  background: -o-linear-gradient(left, #b3dced 0%, #29b8e5 15%, #bce0ee 72%, #bce0ee 81%);
+  background: -ms-linear-gradient(left, #b3dced 0%, #29b8e5 15%, #bce0ee 72%, #bce0ee 81%);
+  background: linear-gradient(to right, #b3dced 0%, #29b8e5 15%, #bce0ee 72%, #bce0ee 81%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee', GradientType=1 ); }
+  body font {
+    familily: fantasy;
+    size: 20em;
+    weight: bold; }
+
+/*# sourceMappingURL=style.css.map */
